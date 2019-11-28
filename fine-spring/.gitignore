@@ -1,2 +1,7 @@
 /target/
 /bin/
+.factorypath
+/.metadata
+/.settings
+.project
+.classpath

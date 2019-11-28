@@ -6,6 +6,8 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.junit.jupiter.api.Test;
 
+import com.fineframework.security.encrypter.digest.SHA256Digester;
+
 public class SHA256DigesterTest {
 
     @Test
