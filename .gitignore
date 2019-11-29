@@ -1,4 +1,7 @@
-/target
-/.metadata
-/.settings
+/target/
+/.metadata/
 .project
+/.settings/
+.classpath
+.factorypath
+
