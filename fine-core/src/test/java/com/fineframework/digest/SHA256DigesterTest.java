@@ -1,4 +1,4 @@
-package fine.security.encrypter.digest;
+package com.fineframework.digest;
 
 import java.io.UnsupportedEncodingException;
 
