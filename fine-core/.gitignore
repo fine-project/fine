@@ -1,6 +1,6 @@
-/target
+/target/
 .factorypath
-/.metadata
-/.settings
+/.metadata/
+/.settings/
 .project
 .classpath
