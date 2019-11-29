@@ -1,10 +1,10 @@
-package com.fineframework.security.encrypter.digest;
+package com.fineframework.security.digest;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * ShA256のEncrypter�?
+ * SHA256アルゴリズムでハッシュ化を行うEncrypter。
  * @author masanii15
  * @since 1.0
  */
