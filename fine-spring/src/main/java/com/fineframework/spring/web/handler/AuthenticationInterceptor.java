@@ -34,17 +34,6 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-//		if (request.getRequestURI().contains("/login") 
-//		        || request.getRequestURI().contains("/error") 
-//		        || request.getRequestURI().contains("/healthcheck")) {
-//			return true;
-//		}
-
-		if ("options".equals(request.getMethod().toLowerCase())) {
-			response.setStatus(200);
-			return true;
-		}
-
 		String accessToken = request.getHeader("accessToken");
 		UserSession userSession = new UserSession();
 		userSession.setAccessToken(accessToken);
@@ -54,13 +43,6 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 			threadLocalUserSession.set(new UserSession());
 			LOGGER.info("access token failure. token was empty!");
 
-			response.setHeader("Access-Control-Allow-Origin", "*");
-			response.setHeader("Access-Control-Allow-Credentials", "true");
-			response.setHeader("Access-Control-Allow-Methods",
-					"ACL, CANCELUPLOAD, CHECKIN, CHECKOUT, COPY, DELETE, GET, HEAD, LOCK, MKCALENDAR, MKCOL, MOVE, OPTIONS, POST, PROPFIND, PROPPATCH, PUT, REPORT, SEARCH, UNCHECKOUT, UNLOCK, UPDATE, VERSION-CONTROL");
-			response.setHeader("Access-Control-Max-Age", "3600");
-			response.setHeader("Access-Control-Allow-Headers",
-					"Origin, X-Requested-With, Content-Type, Accept, Key, Authorization");
 			response.setStatus(401);
 			return false;
 		} else {

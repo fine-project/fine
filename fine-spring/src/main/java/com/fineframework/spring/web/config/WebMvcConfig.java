@@ -7,6 +7,7 @@ package com.fineframework.spring.web.config;
 
 import com.fineframework.spring.web.handler.AuthenticationInterceptor;
 import com.fineframework.spring.web.handler.AuthorizationInterceptor;
+import com.fineframework.spring.web.handler.CORSInterceptor;
 
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
@@ -15,9 +16,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
     private AuthenticationInterceptor authenticationInterceptor;
     @Autowired
     private AuthorizationInterceptor authorizationInterceptor;
+    @Autowired
+    private CORSInterceptor corsInterceptor;
 
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
+
+      // CORS
+      registry.addInterceptor(corsInterceptor)
+      .addPathPatterns("/**")
+      ;
 
       // 認証
       registry.addInterceptor(authenticationInterceptor)
