@@ -13,6 +13,7 @@
   <modules>
     <module>fine-core</module>
     <module>fine-spring</module>
+    <module>fine-document</module>
   </modules>
 
 	<properties>
