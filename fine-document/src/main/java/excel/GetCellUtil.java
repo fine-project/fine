@@ -16,9 +16,9 @@ public class GetCellUtil {
 	private GetCellUtil() {
 	}
 
-	public static void getCellValue(Sheet sheet, Object obj) {
+	public static void getCellValue(Sheet sheet, Class<TestDto> clazz) {
 
-		for (Field field : obj.getClass().getDeclaredFields()) {
+		for (Field field : clazz.getDeclaredFields()) {
 			ExcelCellField annotation = field.getAnnotation(ExcelCellField.class);
 			if (annotation == null) {
 				continue;
@@ -26,13 +26,14 @@ public class GetCellUtil {
 			field.setAccessible(true);
 
 			Row row = sheet.getRow(annotation.row());
+			if (row != null) {
 			Cell cell = row.getCell(annotation.cell());
 			try {
-				field.set(obj, getCellValue(cell));
+				field.set(clazz, getCellValue(cell));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		}}
 	}
 
 	public static void getListValue(Sheet sheet, Object obj) {
