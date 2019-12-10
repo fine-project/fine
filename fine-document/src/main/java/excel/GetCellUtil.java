@@ -1,12 +1,16 @@
 package excel;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+
 
 public class GetCellUtil {
 
@@ -16,7 +20,7 @@ public class GetCellUtil {
 	private GetCellUtil() {
 	}
 
-	public static void getCellValue(Sheet sheet, Class<TestDto> clazz) {
+	public static <T> T getCellValue(Sheet sheet, Class<T> clazz) {
 
 		for (Field field : clazz.getDeclaredFields()) {
 			ExcelCellField annotation = field.getAnnotation(ExcelCellField.class);
@@ -27,26 +31,41 @@ public class GetCellUtil {
 
 			Row row = sheet.getRow(annotation.row());
 			if (row != null) {
-			Cell cell = row.getCell(annotation.cell());
-			try {
-				field.set(clazz, getCellValue(cell));
-			} catch (Exception e) {
-				e.printStackTrace();
+				Cell cell = row.getCell(annotation.cell());
+				try {
+					field.set(clazz.getDeclaredConstructor().newInstance(), getCellValue(cell));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-		}}
+		}
+		return (T) new Object();
 	}
 
-	public static void getListValue(Sheet sheet, Object obj) {
+	public static <T> T getListValue(Sheet sheet, Class<T> clazz) {
 
-		for (Field field : obj.getClass().getDeclaredFields()) {
+		for (Field field : clazz.getDeclaredFields()) {
+			for (Annotation test : field.getAnnotations()) {
+				System.out.println(test.toString());
+			}
 			ExcelListField listFiledAnnotation = field.getAnnotation(ExcelListField.class);
 			if (listFiledAnnotation == null) {
 				continue;
+			}
+			if (field.getType().isAssignableFrom(List.class)) {
+				Class<?> componentType = field.getType().getComponentType();
+				for (Field field2 : componentType.getDeclaredFields()) {
+					System.out.println("kita----");
+					for (Annotation test : field.getAnnotations()) {
+						System.out.println(test.toString());
+					}
+				}
 			}
 
 			field.setAccessible(true);
 
 		}
+		return null;
 	}
 
 	private static String getCellValue(Cell cell) {
