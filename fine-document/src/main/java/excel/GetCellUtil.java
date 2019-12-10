@@ -2,8 +2,6 @@ package excel;
 
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -18,27 +16,36 @@ public class GetCellUtil {
 	private GetCellUtil() {
 	}
 
-	public static Map<String, String> getCellValue(Sheet sheet, Object obj) {
-		Map<String, String> valueMap = new HashMap<>();
-		if (obj == null) {
-			return null;
-		}
-		Class<?> clazz = obj.getClass();
-		for (Field field : clazz.getDeclaredFields()) {
+	public static void getCellValue(Sheet sheet, Object obj) {
+
+		for (Field field : obj.getClass().getDeclaredFields()) {
 			ExcelCellField annotation = field.getAnnotation(ExcelCellField.class);
 			if (annotation == null) {
 				continue;
 			}
 			field.setAccessible(true);
 
-			for (ExcelCellFieldMapping testMapping : annotation.fieldMapping()) {
-				Row row = sheet.getRow(testMapping.row());
-				Cell cell = row.getCell(testMapping.cell());
-				String keyname = testMapping.keyName();
-				valueMap.put(keyname, getCellValue(cell));
+			Row row = sheet.getRow(annotation.row());
+			Cell cell = row.getCell(annotation.cell());
+			try {
+				field.set(obj, getCellValue(cell));
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
-		return valueMap;
+	}
+
+	public static void getListValue(Sheet sheet, Object obj) {
+
+		for (Field field : obj.getClass().getDeclaredFields()) {
+			ExcelListField listFiledAnnotation = field.getAnnotation(ExcelListField.class);
+			if (listFiledAnnotation == null) {
+				continue;
+			}
+
+			field.setAccessible(true);
+
+		}
 	}
 
 	private static String getCellValue(Cell cell) {

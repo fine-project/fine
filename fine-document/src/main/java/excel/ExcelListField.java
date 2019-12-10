@@ -10,8 +10,10 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExcelCellField {
-	int row() default 0;
+public @interface ExcelListField {
+	int startRow() default 0;
 
-	int cell() default 0;
+	int startCell() default 0;
+	
+	int endRow() default 0;
 }
