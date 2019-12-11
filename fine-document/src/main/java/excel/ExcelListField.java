@@ -13,7 +13,5 @@ import java.lang.annotation.Target;
 public @interface ExcelListField {
 	int startRow() default 0;
 
-	int startCell() default 0;
-	
 	int endRow() default 0;
 }

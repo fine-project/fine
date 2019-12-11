@@ -36,8 +36,16 @@ public class TestDto {
 	public void setCellC(String cellC) {
 		this.cellC = cellC;
 	}
-
-	@ExcelListField(startRow = 3, startCell = 3, endRow = 10)
+//, endRow = 10
+	@ExcelListField(startRow = 4, endRow = 10)
 	private List<InnerDto> listMap;
+
+	public List<InnerDto> getListMap() {
+		return listMap;
+	}
+
+	public void setListMap(List<InnerDto> listMap) {
+		this.listMap = listMap;
+	}
 
 }
