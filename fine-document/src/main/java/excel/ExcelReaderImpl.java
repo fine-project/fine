@@ -1,5 +1,7 @@
 package excel;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.ParameterizedType;
@@ -11,17 +13,43 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class GetCellUtil {
+public class ExcelReaderImpl implements ExcelReader {
 
-	public static Object getCellValue;
+    private Workbook workBook = null;
 
-	/** private */
-	private GetCellUtil() {
+	@Override
+	public void initialize(String filePath) {
+		try {
+			workBook = WorkbookFactory.create(new File(filePath));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
-	@SuppressWarnings("unchecked")
-	public static <T> T getCellValue(Sheet sheet, Class<T> clazz) {
+	@Override
+	public <T> T getCellValue(String sheetPage, Class<T> clazz) {
+
+		Sheet sheet = workBook.getSheetAt(Integer.parseInt(sheetPage));
+
+		T cellValue = getCellValue(sheet, clazz);
+
+		return cellValue;
+	}
+	
+	
+	public void close() {
+		try {
+			this.workBook.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private static <T> T getCellValue(Sheet sheet, Class<T> clazz) {
 
 		List<T> testList = new ArrayList<>();
 
@@ -104,49 +132,6 @@ public class GetCellUtil {
 		return t;
 	}
 
-	/*
-	 * @SuppressWarnings("unchecked") public static <T> T getListValue(Sheet sheet,
-	 * Class<T> clazz) {
-	 * 
-	 * T t = null; try { t = clazz.getDeclaredConstructor().newInstance(); } catch
-	 * (InstantiationException | IllegalAccessException | IllegalArgumentException |
-	 * InvocationTargetException | NoSuchMethodException | SecurityException e1) {
-	 * // TODO Auto-generated catch block e1.printStackTrace(); }
-	 * 
-	 * List<T> testList = new ArrayList<>();
-	 * 
-	 * for (Field field : clazz.getDeclaredFields()) { ExcelListField
-	 * listFiledAnnotation = field.getAnnotation(ExcelListField.class); if
-	 * (listFiledAnnotation == null) { continue; } field.setAccessible(true); int
-	 * startRow = listFiledAnnotation.startRow(); int endRow =
-	 * listFiledAnnotation.endRow();
-	 * 
-	 * Row row = sheet.getRow(startRow); while (row != null) { if (startRow >
-	 * endRow) { break; } if (field.getType().isAssignableFrom(List.class)) {
-	 * ParameterizedType a = (ParameterizedType) field.getGenericType(); Class<?>
-	 * componentType = (Class<?>) a.getActualTypeArguments()[0];
-	 * 
-	 * T t2 = null; try { t2 = (T)
-	 * componentType.getDeclaredConstructor().newInstance(); } catch
-	 * (InstantiationException | IllegalAccessException | IllegalArgumentException |
-	 * InvocationTargetException | NoSuchMethodException | SecurityException e1) {
-	 * // TODO Auto-generated catch block e1.printStackTrace(); }
-	 * 
-	 * for (Field innerField : componentType.getDeclaredFields()) { Column
-	 * columnAnnotation = innerField.getAnnotation(Column.class); if
-	 * (columnAnnotation == null) { continue; } else {
-	 * innerField.setAccessible(true); int column = columnAnnotation.value();
-	 * 
-	 * Cell cell = row.getCell(column); try { innerField.set(t2,
-	 * getCellValue(cell)); } catch (IllegalArgumentException |
-	 * IllegalAccessException e) { // TODO Auto-generated catch block
-	 * e.printStackTrace(); } } } testList.add(t2); } row =
-	 * sheet.getRow(++startRow); } try { field.set(t, testList); } catch (Exception
-	 * e) { e.printStackTrace(); } }
-	 * 
-	 * return t; }
-	 */
-
 	private static String getCellValue(Cell cell) {
 		String value = null;
 		if (cell != null) {
@@ -174,4 +159,8 @@ public class GetCellUtil {
 		}
 		return value;
 	}
+
+
+
+
 }
