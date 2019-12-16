@@ -49,6 +49,7 @@ public class ExcelReaderImpl implements ExcelReader {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private static <T> T getCellValue(Sheet sheet, Class<T> clazz) {
 
 		List<T> testList = new ArrayList<>();
