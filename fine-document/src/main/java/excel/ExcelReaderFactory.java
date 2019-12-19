@@ -1,26 +1,35 @@
 package excel;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Properties;
 
 import javax.inject.Named;
 
 @Named
 public class ExcelReaderFactory {
-	/** ƒNƒ‰ƒCƒAƒ“ƒgƒpƒX */
-	private static String excellReaderPath;
 
 	private static Constructor<?> constrctor;
 
 	public ExcelReader createReader() {
+		Properties prop = new Properties();
+		InputStream stream = null;
+		stream = getClass().getResourceAsStream("/ExcelReader.properties");
 		try {
-			// property“Ç‚ŞÀ‘•
-			excellReaderPath = "excel.ExcelReaderImpl";
-			constrctor = Class.forName(excellReaderPath).getDeclaredConstructor();
+			prop.load(stream);
+		} catch (IOException e1) {
+			throw new RuntimeException("Propertyã®ãƒ­ãƒ¼ãƒ‰ãŒå¤±æ•—ã—ã¾ã—ãŸã€‚" + e1);
+		}
+		try {
+			constrctor = Class.forName(prop.getProperty("excellReaderPath")).getDeclaredConstructor();
 			return (ExcelReader) constrctor.newInstance();
 		} catch (IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException
-				| InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			throw new RuntimeException("ExcelReaderƒCƒ“ƒXƒ^ƒ“ƒX¶¬‚É¸”s‚µ‚Ü‚µ‚½B" + e);
+				| InstantiationException | IllegalAccessException |
+
+				ClassNotFoundException e) {
+			throw new RuntimeException("ExcelReaderã®ç”ŸæˆãŒå¤±æ•—ã—ã¾ã—ãŸã€‚" + e);
 		}
 	}
 }
