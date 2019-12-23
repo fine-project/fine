@@ -10,9 +10,11 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 
 import com.fineframework.auth.entity.Account;
 import com.fineframework.auth.repository.AccountRepository;
+import com.fineframework.repository.DataNotFoundException;
 import com.fineframework.spring.repository.RdbRepositotySupport;
 
 /**
+ * TODO インデックス検索メソッドも追加
  * @author masanii15
  * @since 1.0
  */
@@ -37,6 +39,12 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
               + "update_user_date_time "
             + "FROM "
             + "  account ";
+
+    private String selectCountSQL = 
+            "SELECT "
+            + "COUNT(*) " 
+          + "FROM "
+          + "  account ";
 
     private String insertSQL = 
             "INSERT "
@@ -71,6 +79,14 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
                 + ":updateUserId, " 
                 + "current_timestamp "
               + ")";
+    
+            private String deleteSQL = 
+                    "DELETE "
+                    + "FROM "
+                    + "  account "
+                    + "WHERE "
+                    + "  account_id = :accountId";
+
 
     @Override
     public Account findByKey(Account entity) {
@@ -82,7 +98,7 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
         List<Account> query = getJdbcTemplate().query(sql, new BeanPropertySqlParameterSource(entity), new BeanPropertyRowMapper<>(Account.class));
 
         if(query.size() == 0) {
-            return null;
+            throw new DataNotFoundException();
         }
         
         return query.get(0);
@@ -97,12 +113,6 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
     }
 
     @Override
-    public List<Account> findByKeys(Set<? extends Account> entity) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
     public <S extends Account> S save(S entity) {
 
         getJdbcTemplate().update(insertSQL,
@@ -112,17 +122,25 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
     }
 
     @Override
-    public Account removeByKey(Account entityy) {
-        // TODO Auto-generated method stub
-        return null;
+    public boolean exists(Account entity) {
+        List<Account> query = getJdbcTemplate().query(selectCountSQL, new BeanPropertySqlParameterSource(entity), new BeanPropertyRowMapper<>(Account.class));
+    	
+    	return query.size() != 0;
     }
 
     @Override
-    public boolean exists(Account entity) {
-        // TODO Auto-generated method stub
-        return false;
+    public Account removeByKey(Account entity) {
+        
+        int update = getJdbcTemplate().update(deleteSQL,
+                new BeanPropertySqlParameterSource(entity));
+        if(update == 0) {
+            return null;
+        }
+        return new Account();
     }
 
+
+    
     @Override
     protected String getWhereOfKey() {
         // TODO Auto-generated method stub
@@ -134,5 +152,13 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
         // TODO Auto-generated method stub
         return null;
     }
+    
+    @Override
+    public List<Account> findByKeys(Set<? extends Account> entity) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+
 
 }
