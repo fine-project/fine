@@ -33,10 +33,10 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
               + "last_login_failure_date_time, " 
               + "is_locked, " 
               + "last_login_date_time, " 
-              + "insert_user_id, " 
-              + "insert_user_date_time, " 
-              + "update_user_id, " 
-              + "update_user_date_time "
+              + "created_user_id, " 
+              + "created_user_date_time, " 
+              + "updated_user_id, " 
+              + "updated_user_date_time "
             + "FROM "
             + "  account ";
 
@@ -59,10 +59,10 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
                 + "last_login_failure_date_time, " 
                 + "is_locked, " 
                 + "last_login_date_time, " 
-                + "insert_user_id, " 
-                + "insert_user_date_time, " 
-                + "update_user_id, " 
-                + "update_user_date_time "
+                + "created_user_id, " 
+                + "created_user_date_time, " 
+                + "updated_user_id, " 
+                + "updated_user_date_time "
               + "VALUES ("
                 + ":accountId, " 
                 + ":userId, " 
@@ -139,6 +139,20 @@ public class AccountRepositorySupport extends RdbRepositotySupport<Account> impl
         return new Account();
     }
 
+    public Account findByUserId(Account entity) {
+        String sql = 
+                  selectSQL
+                  + "WHERE "
+                  + "  user_id = :userId";
+
+        List<Account> query = getJdbcTemplate().query(sql, new BeanPropertySqlParameterSource(entity), new BeanPropertyRowMapper<>(Account.class));
+
+        if(query.size() == 0) {
+            throw new DataNotFoundException();
+        }
+        
+        return query.get(0);
+    }
 
     
     @Override
