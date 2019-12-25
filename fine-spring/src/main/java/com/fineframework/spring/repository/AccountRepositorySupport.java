@@ -1,4 +1,4 @@
-package com.fineframework.spring.auth.repository;
+package com.fineframework.spring.repository;
 
 import java.util.List;
 import java.util.Set;
@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import com.fineframework.auth.entity.Account;
 import com.fineframework.auth.repository.AccountRepository;
 import com.fineframework.repository.DataNotFoundException;
-import com.fineframework.spring.repository.RdbRepositotySupport;
 
 /**
  * TODO インデックス検索メソッドも追加
