@@ -11,8 +11,7 @@ let realConnectServerUrls = ['/admin/supplier-brands-delete']
 
 // URL
 let urlForServer = 'http://localhost:5000'
-let urlForAWS = 'https://ap1s.hirosophy.tokyo/'
-// 'http://spring-boot.gjikmnapac.ap-northeast-1.elasticbeanstalk.com/'
+let urlForAWS = 'https://XXXXXXXXXXXXX.com/'
 
 let appJs = ''
 
@@ -92,9 +91,9 @@ export default {
   orderItems(request) {
     let response = this.sendGet(
       '/sales/orderItems?shippingDate=' +
-      request.shippingDate +
-      '&storeCode=' +
-      request.storeCode
+        request.shippingDate +
+        '&storeCode=' +
+        request.storeCode
     )
     return response
   },
@@ -515,9 +514,9 @@ export default {
           // 正常時、ダイアログが設定されている場合は、その内容を表示
           if (!nonDispDialog) {
             appJs.showResultDialog(
-              dialogMessage != null ?
-              dialogMessage :
-              'データ送信が完了しました',
+              dialogMessage != null
+                ? dialogMessage
+                : 'データ送信が完了しました',
               forwardNameOnClose,
               false,
               callbackAfterOnClose,
@@ -620,7 +619,7 @@ export default {
     link.href = data
     link.download = filename + '.pdf'
     link.click()
-    setTimeout(function () {
+    setTimeout(function() {
       // For Firefox it is necessary to delay revoking the ObjectURL
       window.URL.revokeObjectURL(data)
     }, 100)
