@@ -1,0 +1,1592 @@
+{
+  "admin_print-delivery-slip": {
+    "_comment": "請求書出力",
+    "result": 0,
+    "errors": [],
+    "stoerName": "○○ドラッグストア",
+    "orderDetails": [{
+        "janCode": "J0000001",
+        "itemCategoryName": "桜米麹マスク",
+        "itemName": "桜米麹マスク１枚",
+        "region1": 5,
+        "region2": 3,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000002",
+        "itemCategoryName": "桜米麹マスク",
+        "itemCode": "I0002",
+        "itemName": "桜米麹マスク１０枚",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000003",
+        "itemCategoryName": "桜米麹マスク",
+        "itemName": "桜米麹マスク２０枚",
+        "region1": 0,
+        "region2": 1,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000004",
+        "itemCategoryName": "桜シリーズ",
+        "itemName": "桜シリーズ-商品D",
+        "region1": 100,
+        "region2": 150,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000005",
+        "itemCategoryName": "桜シリーズ",
+        "itemName": "桜シリーズ-商品E",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000006",
+        "itemCategoryName": "桜シリーズ",
+        "itemName": "桜シリーズ-商品F",
+        "region1": 6,
+        "region2": 199,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000007",
+        "itemCategoryName": "メイク",
+        "itemName": "メイク-商品G",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000008",
+        "itemCategoryName": "メイク",
+        "itemName": "メイク-商品H",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000009",
+        "itemCategoryName": "ヘアケア",
+        "itemName": "ヘアケア-商品I",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000010",
+        "itemCategoryName": "スキンケア",
+        "itemName": "スキンケア-商品J",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000011",
+        "itemCategoryName": "スキンケア",
+        "itemName": "スキンケア-商品K",
+        "region1": 55,
+        "region2": 0,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000012",
+        "itemCategoryName": "スキンケア",
+        "itemName": "スキンケア-商品E",
+        "region1": 0,
+        "region2": 33,
+        "isGray": false
+      },
+      {
+        "janCode": "J0000013",
+        "itemCategoryName": "trysailシリーズ",
+        "itemName": "trysailシリーズ-商品Z",
+        "region1": 0,
+        "region2": 0,
+        "isGray": false
+      }
+    ]
+  },
+  "admin_supplier-brands-delete": {
+    "_comment": "取引先・ブランド関連削除",
+    "result": 0,
+    "errors": []
+  },
+  "admin_supplier-brands": {
+    "_comment": "取引先・ブランド関連一覧取得",
+    "result": 0,
+    "errors": [],
+    "supplierBrands": [{
+        "supplierCode": "A0001",
+        "supplierName": "株式会社　○○○",
+        "brandId": "0001",
+        "brandName": "LAOX"
+      },
+      {
+        "supplierCode": "A0002",
+        "supplierName": "株式会社　COC",
+        "brandId": "0002",
+        "brandName": "サツドラ"
+      },
+      {
+        "supplierCode": "A0001",
+        "supplierName": "株式会社　○○○",
+        "brandId": "0003",
+        "brandName": "ブランドC"
+      },
+      {
+        "supplierCode": "A0002",
+        "supplierName": "株式会社　COC",
+        "brandId": "0004",
+        "brandName": "ブランドD"
+      }
+    ]
+  },
+  "admin_order-regist-slip-number": {
+    "_comment": "伝票番号を登録する",
+    "result": 0,
+    "errors": []
+  },
+  "admin_fix-order": {
+    "_comment": "注文受付を確定する",
+    "result": 0,
+    "errors": []
+  },
+  "admin_order-lock-region1": {
+    "_comment": "リージョン1をロック",
+    "result": 0,
+    "errors": [],
+    "region1IsLocked": "1",
+    "region1UpdatedUser": "井上",
+    "region1UpdatedAt": "20190903"
+  },
+  "admin_order-lock-region2": {
+    "_comment": "リージョン2をロック",
+    "result": 0,
+    "errors": [],
+    "region2IsLocked": "0",
+    "region2UpdatedUser": "キム",
+    "region2UpdatedAt": "20190904"
+  },
+
+  "admin_order-details-by-day": {
+    "_comment": "店舗別の日毎の発注商品一覧",
+    "result": 0,
+    "errors": [],
+    "shippingDate": "20190811",
+    "storeName": "○○ドラッグストア",
+    "shopCode": "SC001",
+    "createdUser": "平沢",
+    "region1IsLocked": "0",
+    "region1UpdatedUser": "",
+    "region1UpdatedAt": "",
+    "region2IsLocked": "1",
+    "region2UpdatedUser": "高橋",
+    "region2UpdatedAt": "20190902",
+    "slipNumber": "12423141423",
+    "orderDetails": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "itemCode": "I0001",
+        "itemName": "サプリメント-商品A",
+        "numberOfStocks": 100,
+        "orderLimitNumber": 10,
+        "quantity": 10,
+        "numberOfAdjustments": 8,
+        "region1": 5,
+        "region2": 3,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I0002",
+        "itemName": "スキンケア-商品B",
+        "numberOfStocks": 200,
+        "orderLimitNumber": 15,
+        "quantity": 10,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I0003",
+        "itemName": "ヘアケア-商品C",
+        "numberOfStocks": 30,
+        "orderLimitNumber": 20,
+        "quantity": 20,
+        "numberOfAdjustments": 1,
+        "region1": 0,
+        "region2": 1,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I0004",
+        "itemName": "桜シリーズ-商品D",
+        "numberOfStocks": 20000,
+        "orderLimitNumber": 25,
+        "quantity": 20,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I0005",
+        "itemName": "温金泉シリーズ-商品E",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 25,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I0006",
+        "itemName": "スキンケア-商品F",
+        "numberOfStocks": 9,
+        "orderLimitNumber": 2,
+        "quantity": 2,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I0007",
+        "itemName": "メイク-商品G",
+        "numberOfStocks": 1234,
+        "orderLimitNumber": 40,
+        "quantity": 13,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I0008",
+        "itemName": "スキンケア-商品H",
+        "numberOfStocks": 30,
+        "orderLimitNumber": 45,
+        "quantity": 20,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I0009",
+        "itemName": "ヘアケア-商品I",
+        "numberOfStocks": 30,
+        "orderLimitNumber": 50,
+        "quantity": 15,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00010",
+        "itemName": "スキンケア-商品J",
+        "numberOfStocks": 10,
+        "orderLimitNumber": 30,
+        "quantity": 20,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A00010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I0011",
+        "itemName": "メイク-商品K",
+        "numberOfStocks": 330,
+        "orderLimitNumber": 30,
+        "quantity": 10,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I0012",
+        "itemName": "桜シリーズ-商品E",
+        "numberOfStocks": 220,
+        "orderLimitNumber": 30,
+        "quantity": 30,
+        "numberOfAdjustments": 0,
+        "region1": 0,
+        "region2": 0,
+        "isChanged": false
+      }
+    ]
+  },
+  "admin_orders_by_day": {
+    "_comment": "日毎の発注依頼一覧",
+    "result": 0,
+    "errors": [],
+    "orders": [{
+        "orderManagementId": "OM00000001",
+        "shippingDate": "20190706",
+        "shopCode": "SC001",
+        "storeName": "○○○○ドラッグストアA",
+        "orderDay": "2019/07/01",
+        "hasImage": true,
+        "slipNumber": "D0001;D0002",
+        "createdUser": "高橋",
+        "createdAt": "20190701"
+      },
+      {
+        "orderManagementId": "OM00000002",
+        "shippingDate": "20190706",
+        "shopCode": "SC002",
+        "storeName": "○○○○ドラッグストアB",
+        "orderDay": "2019/07/01",
+        "hasImage": true,
+        "slipNumber": "D0003",
+        "createdUser": "キム",
+        "createdAt": "20190701"
+      },
+      {
+        "orderManagementId": "OM00000003",
+        "shippingDate": "20190706",
+        "shopCode": "SC003",
+        "storeName": "○○○○ドラッグストアC",
+        "orderDay": "2019/07/01",
+        "hasImage": false,
+        "slipNumber": "",
+        "createdUser": "井上",
+        "createdAt": "20190701"
+      },
+      {
+        "orderManagementId": "OM00000004",
+        "shippingDate": "20190706",
+        "shopCode": "SC004",
+        "storeName": "○○○○ドラッグストアD",
+        "orderDay": "2019/07/01",
+        "hasImage": true,
+        "slipNumber": "D0004",
+        "createdUser": "小山"
+      },
+      {
+        "orderManagementId": "OM00000005",
+        "shippingDate": "20190706",
+        "shopCode": "SC005",
+        "storeName": "○○○○ドラッグストアE",
+        "orderDay": "2019/07/01",
+        "hasImage": false,
+        "slipNumber": "",
+        "createdUser": "太田",
+        "createdAt": "20190701"
+      },
+      {
+        "orderManagementId": "OM00000006",
+        "shippingDate": "20190706",
+        "shopCode": "SC006",
+        "storeName": "○○○○ドラッグストアF",
+        "orderDay": "2019/07/01",
+        "hasImage": false,
+        "slipNumber": "",
+        "createdUser": "陳",
+        "createdAt": "20190701"
+      },
+      {
+        "orderManagementId": "OM00000007",
+        "shippingDate": "20190706",
+        "shopCode": "SC007",
+        "storeName": "○○○○ドラッグストアG",
+        "orderDay": "2019/07/01",
+        "hasImage": true,
+        "slipNumber": "D0005;D0006;D0007",
+        "createdUser": "テストユーザ",
+        "createdAt": "20190701"
+      }
+    ]
+  },
+  "sales_send-order": {
+    "_comment": "発注依頼送信",
+    "result": 0,
+    "errors": []
+  },
+  "sales_orderItems": {
+    "_comment": "依頼画面用の商品一覧を取得",
+    "result": 0,
+    "errors": [],
+    "itemCategories": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "status": "0"
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "status": "0"
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0010",
+        "itemCategoryName": "メイク",
+        "status": "1"
+      }
+    ],
+    "items": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "itemCode": "I00001",
+        "itemName": "サプリメント-商品A",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 10,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00002",
+        "itemName": "スキンケア-商品B",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 15,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I00003",
+        "itemName": "ヘアケア-商品C",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 20,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I00004",
+        "itemName": "桜シリーズ-商品D",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 25,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I00005",
+        "itemName": "温金泉シリーズ-商品E",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00006",
+        "itemName": "スキンケア-商品F",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 35,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I00007",
+        "itemName": "メイク-商品G",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 40,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00008",
+        "itemName": "スキンケア-商品H",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 45,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I00009",
+        "itemName": "ヘアケア-商品I",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 50,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00010",
+        "itemName": "スキンケア-商品J",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A00010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I00011",
+        "itemName": "メイク-商品K",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I00012",
+        "itemName": "桜シリーズ-商品E",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      }
+    ]
+  },
+  "sales_itemCategories_itemCategoryId_items": {
+    "_comment": "カテゴリ別アイテム取得（現在は使用していないが、サンプルとして置いておく）",
+    "result": 0,
+    "errors": [],
+    "items": [{
+        "itemName": "カテゴリA-商品A",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 10,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品B",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 15,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品C",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 20,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品D",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 25,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品E",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品F",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 35,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品G",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 40,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品H",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 45,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品I",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 50,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品J",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品K",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      },
+      {
+        "itemName": "カテゴリA-商品E",
+        "numberOfStocks": 0,
+        "orderLimitNumber": 30,
+        "quantity": 0,
+        "isChanged": false
+      }
+    ]
+  },
+  "admin_businessContacts-important-put": {
+    "_comment": "業務連絡重要度更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_businessContacts-delete": {
+    "_comment": "業務連絡削除",
+    "result": 0,
+    "errors": []
+  },
+  "admin_businessContacts-post": {
+    "_comment": "業務連絡登録",
+    "result": 0,
+    "errors": [],
+    "businessContact": {
+      "businessContractId": "0011",
+      "notice": "追加業務連絡Z",
+      "isImportant": "1",
+      "createdAt": "20190801",
+      "isDeleted": "0"
+    }
+  },
+  "admin_businessContacts": {
+    "_comment": "業務連絡一覧取得",
+    "result": 0,
+    "errors": [],
+    "businessContacts": [{
+        "businessContractId": "0001",
+        "notice": "業務連絡項目テスト",
+        "isImportant": "0",
+        "createdAt": "20190801",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0002",
+        "notice": "業務連絡項目テスト業務連絡項目テスト",
+        "isImportant": "0",
+        "createdAt": "20190702",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0003",
+        "notice": "業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト",
+        "isImportant": "1",
+        "createdAt": "20190630",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0004",
+        "notice": "業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト",
+        "isImportant": "0",
+        "createdAt": "20190611",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0005",
+        "notice": "業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト業務連絡項目テスト",
+        "isImportant": "1",
+        "createdAt": "20180111",
+        "isDeleted": "0"
+      }
+    ]
+  },
+  "admin_brands-status-put": {
+    "_comment": "ブランドステータス更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_brands-post": {
+    "_comment": "ブランド登録",
+    "result": 0,
+    "errors": [],
+    "brand": {
+      "brandId": "0011",
+      "brandName": "ブランドZ",
+      "status": "0"
+    }
+  },
+  "admin_brands": {
+    "_comment": "ブランド一覧取得",
+    "result": 0,
+    "errors": [],
+    "brands": [{
+        "brandId": "0011",
+        "brandName": "LAOX",
+        "status": "0"
+      },
+      {
+        "brandId": "0002",
+        "brandName": "サツドラ",
+        "status": "0"
+      },
+      {
+        "brandId": "0003",
+        "brandName": "ブランドC",
+        "status": "1"
+      },
+      {
+        "brandId": "0004",
+        "brandName": "ブランドD",
+        "status": "0"
+      },
+      {
+        "brandId": "0005",
+        "brandName": "ブランドE",
+        "status": "1"
+      }
+    ]
+  },
+  "admin_users-password-change": {
+    "_comment": "ユーザパスワード変更",
+    "result": 0,
+    "errors": []
+  },
+  "admin_users-auth_put": {
+    "_comment": "ユーザ権限変更",
+    "result": 0,
+    "errors": []
+  },
+  "admin_users-initialize-password": {
+    "_comment": "ユーザパスワード初期化",
+    "result": 0,
+    "errors": []
+  },
+  "admin_users": {
+    "_comment": "ユーザ一覧取得",
+    "result": 0,
+    "errors": [],
+    "users": [{
+        "userId": "A0001",
+        "userName": "高橋",
+        "userGroup": "G1",
+        "userType": "管理者",
+        "adminRole": "1"
+      },
+      {
+        "userId": "A0002",
+        "userName": "井上",
+        "userGroup": "G2",
+        "userType": "販売員",
+        "adminRole": "2"
+      },
+      {
+        "userId": "A0003",
+        "userName": "キム",
+        "userGroup": "G1",
+        "userType": "販売員",
+        "adminRole": "3"
+      },
+      {
+        "userId": "A0004",
+        "userName": "USER4",
+        "userGroup": "G3",
+        "userType": "販売員",
+        "adminRole": "0"
+      }
+    ]
+  },
+  "admin_stores-items-update": {
+    "_comment": "店舗取り扱い商品更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_stores_items_storeCode": {
+    "_comment": "店舗更新",
+    "result": 0,
+    "errors": [],
+    "shopsItems": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "itemCode": "I00001",
+        "itemName": "商品A",
+        "janCode": "0000001",
+        "unitPrice": "4,000",
+        "numberOfStocks": "50",
+        "orderLimitNumber": "15",
+        "isDeleted": false,
+        "isHandling": true
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00002",
+        "itemName": "商品B",
+        "janCode": "0000002",
+        "unitPrice": "5,000",
+        "numberOfStocks": "60",
+        "orderLimitNumber": "20",
+        "isDeleted": false,
+        "isHandling": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I00003",
+        "itemName": "商品C",
+        "janCode": "0000003",
+        "unitPrice": "14,000",
+        "numberOfStocks": "70",
+        "orderLimitNumber": "30",
+        "isDeleted": false,
+        "isHandling": true
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I00004",
+        "itemName": "商品D",
+        "janCode": "0000004",
+        "unitPrice": "20,000",
+        "numberOfStocks": "55",
+        "orderLimitNumber": "10",
+        "isDeleted": false,
+        "isHandling": true
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I00005",
+        "itemName": "商品E",
+        "janCode": "0000005",
+        "unitPrice": "8,000",
+        "numberOfStocks": "80",
+        "orderLimitNumber": "20",
+        "isDeleted": true,
+        "isHandling": false
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I00006",
+        "itemName": "商品F",
+        "janCode": "0000006",
+        "unitPrice": "7,000",
+        "numberOfStocks": "90",
+        "orderLimitNumber": "50",
+        "isDeleted": false,
+        "isHandling": false
+      },
+      {
+        "itemCategoryId": "A00010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I00007",
+        "itemName": "商品G",
+        "janCode": "0000007",
+        "unitPrice": "10,000",
+        "numberOfStocks": "100",
+        "orderLimitNumber": "45",
+        "isDeleted": false,
+        "isHandling": false
+      }
+    ]
+  },
+  "admin_stores_storeCode": {
+    "_comment": "店舗更新情報取得",
+    "result": 0,
+    "errors": [],
+    "store": {
+      "storeCode": "S0003",
+      "storeName": "株式会社　○○○○○○",
+      "supplierCode": "A0002",
+      "isSalesperson": "0",
+      "isDeleted": "1"
+    }
+  },
+  "admin_stores-post": {
+    "_comment": "店舗新規登録",
+    "result": 0,
+    "errors": []
+  },
+  "admin_stores-put": {
+    "_comment": "店舗更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_stores": {
+    "_comment": "商品一覧取得",
+    "result": 0,
+    "errors": [],
+    "stores": [{
+        "storeCode": "S0001",
+        "storeName": "店舗A",
+        "supplierCode": "A0001",
+        "isSalesperson": "1",
+        "isRegisterdItem": true,
+        "isDeleted": "1"
+      },
+      {
+        "storeCode": "S0002",
+        "storeName": "店舗B",
+        "supplierCode": "A0001",
+        "isSalesperson": "1",
+        "isRegisterdItem": true,
+        "isDeleted": "1"
+      },
+      {
+        "storeCode": "S0003",
+        "storeName": "店舗C",
+        "supplierCode": "A0002",
+        "isSalesperson": "1",
+        "isRegisterdItem": false,
+        "isDeleted": "0"
+      },
+      {
+        "storeCode": "S0004",
+        "storeName": "店舗D",
+        "supplierCode": "A0002",
+        "isSalesperson": "0",
+        "isRegisterdItem": true,
+        "isDeleted": "0"
+      },
+      {
+        "storeCode": "S0005",
+        "storeName": "店舗E",
+        "supplierCode": "A0002",
+        "isSalesperson": "1",
+        "isDeleted": "0"
+      },
+      {
+        "storeCode": "S0006",
+        "storeName": "店舗F",
+        "supplierCode": "A0003",
+        "isSalesperson": "1",
+        "isRegisterdItem": false,
+        "isDeleted": "0"
+      },
+      {
+        "storeCode": "S0007",
+        "storeName": "店舗G",
+        "supplierCode": "A0004",
+        "isSalesperson": "0",
+        "isRegisterdItem": false,
+        "isDeleted": "1"
+      }
+    ]
+  },
+  "admin_suppliers_post": {
+    "_comment": "取引先新規登録",
+    "result": 0,
+    "errors": []
+  },
+  "admin_suppliers_put": {
+    "_comment": "取引先更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_suppliers_supplierCode": {
+    "_comment": "取引先更新",
+    "result": 0,
+    "errors": [],
+    "supplier": {
+      "supplierCode": "A0003",
+      "supplierName": "株式会社　○○○",
+      "postalCode": "1600022",
+      "address": "東京都港区",
+      "buildingName": "ヒロソフィービル",
+      "contactName": "田中",
+      "contactInformation": "03-123-1234",
+      "contractType": "契約条件3",
+      "isDeleted": "有効"
+    }
+  },
+  "admin_suppliers": {
+    "_comment": "取引先一覧取得",
+    "result": 0,
+    "errors": [],
+    "suppliers": [{
+        "supplierCode": "A0001",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区芝4-6-4",
+        "buildingName": "ヒロソフィー三田ビル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件1",
+        "isDeleted": "有効"
+      },
+      {
+        "supplierCode": "A0002",
+        "supplierName": "株式会社　COC",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "銀座ビル",
+        "contactName": "小山",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件2",
+        "isDeleted": "有効"
+      },
+      {
+        "supplierCode": "A0003",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "ヒロソフィービル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件3",
+        "isDeleted": "有効"
+      },
+      {
+        "supplierCode": "A0004",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "ヒロソフィービル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件4",
+        "isDeleted": "無効"
+      },
+      {
+        "supplierCode": "A0005",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "ヒロソフィービル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件5",
+        "isDeleted": "有効"
+      },
+      {
+        "supplierCode": "A0006",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "ヒロソフィービル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件6",
+        "isDeleted": "無効"
+      },
+      {
+        "supplierCode": "A0007",
+        "supplierName": "株式会社　○○○",
+        "postalCode": "1600022",
+        "address": "東京都港区",
+        "buildingName": "ヒロソフィービル",
+        "contactName": "田中",
+        "contactInformation": "03-123-1234",
+        "contractType": "契約条件7",
+        "isDeleted": "無効"
+      }
+    ]
+  },
+  "admin_items_itemCode": {
+    "_comment": "商品更新",
+    "result": 0,
+    "errors": [],
+    "item": {
+      "itemCategory": {
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "status": "1"
+      },
+      "itemCategoryId": "A0001",
+      "itemCategoryName": "サプリメント",
+      "itemCode": "I00001",
+      "itemName": "商品A",
+      "janCode": "0000001",
+      "unitPrice": "4000",
+      "numberOfStocks": "50",
+      "orderLimitNumber": "15",
+      "isDeleted": "0",
+      "isChanged": false
+    }
+  },
+  "admin_items_post": {
+    "_comment": "商品登録",
+    "result": 0,
+    "errors": []
+  },
+  "admin_items_put": {
+    "_comment": "商品更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_item_updateStock": {
+    "_comment": "商品在庫更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_items": {
+    "items": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "itemCode": "I00001",
+        "itemName": "商品A",
+        "janCode": "0000001",
+        "unitPrice": "4,000",
+        "numberOfStocks": "50",
+        "orderLimitNumber": "15",
+        "isDeleted": false,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "itemCode": "I00002",
+        "itemName": "商品B",
+        "janCode": "0000002",
+        "unitPrice": "5,000",
+        "numberOfStocks": "60",
+        "orderLimitNumber": "20",
+        "isDeleted": false,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "itemCode": "I00003",
+        "itemName": "商品C",
+        "janCode": "0000003",
+        "unitPrice": "14,000",
+        "numberOfStocks": "70",
+        "orderLimitNumber": "30",
+        "isDeleted": false,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "itemCode": "I00004",
+        "itemName": "商品D",
+        "janCode": "0000004",
+        "unitPrice": "20,000",
+        "numberOfStocks": "55",
+        "orderLimitNumber": "10",
+        "isDeleted": false,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I00005",
+        "itemName": "商品E",
+        "janCode": "0000005",
+        "unitPrice": "8,000",
+        "numberOfStocks": "80",
+        "orderLimitNumber": "20",
+        "isDeleted": true,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "itemCode": "I00006",
+        "itemName": "商品F",
+        "janCode": "0000006",
+        "unitPrice": "7,000",
+        "numberOfStocks": "90",
+        "orderLimitNumber": "50",
+        "isDeleted": false,
+        "isChanged": false
+      },
+      {
+        "itemCategoryId": "A00010",
+        "itemCategoryName": "メイク",
+        "itemCode": "I00007",
+        "itemName": "商品G",
+        "janCode": "0000007",
+        "unitPrice": "10,000",
+        "numberOfStocks": "100",
+        "orderLimitNumber": "45",
+        "isDeleted": false,
+        "isChanged": false
+      }
+    ]
+  },
+  "admin_itemCategories_put": {
+    "_comment": "商品カテゴリ更新",
+    "result": 0,
+    "errors": []
+  },
+  "admin_itemCategories_post": {
+    "_comment": "商品カテゴリ更新",
+    "result": 0,
+    "errors": [],
+    "itemCategory": {
+      "itemCategoryId": "P0001",
+      "itemCategoryName": "新規追加カテゴリ",
+      "status": "1"
+    }
+  },
+  "admin_supplier-brand-post": {
+    "_comment": "取引先ブランド関連登録",
+    "result": 0,
+    "errors": []
+  },
+  "admin_itemCategories": {
+    "_comment": "商品カテゴリ一覧取得",
+    "result": 0,
+    "errors": [],
+    "itemCategories": [{
+        "itemCategoryId": "A0001",
+        "itemCategoryName": "サプリメント",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0002",
+        "itemCategoryName": "スキンケア",
+        "status": "0"
+      },
+      {
+        "itemCategoryId": "A0003",
+        "itemCategoryName": "ヘアケア",
+        "status": "0"
+      },
+      {
+        "itemCategoryId": "A0004",
+        "itemCategoryName": "桜シリーズ",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0005",
+        "itemCategoryName": "温金泉シリーズ",
+        "status": "1"
+      },
+      {
+        "itemCategoryId": "A0010",
+        "itemCategoryName": "メイク",
+        "status": "1"
+      }
+    ]
+  },
+  "admin_login": {
+    "_comment": "管理者ログイン",
+    "result": 0,
+    "errors": [],
+    "showPasswordChange": false,
+    "accessToken": "ac99cc34-184d-49e2-99af-089f53c828fc",
+    "user": {
+      "userId": "U00001",
+      "lastName": "りさ",
+      "firstName": "種田",
+      "userGroup": "1",
+      "staffType": "1",
+      "adminRole": "1"
+    }
+  },
+  "sales_login": {
+    "_comment": "販売員ログイン",
+    "result": 0,
+    "errors": [],
+    "showPasswordChange": false,
+    "accessToken": "ac18cc34-184d-49e2-99af-089f53c828fc",
+    "user": {
+      "userId": "U00012",
+      "lastName": "もも",
+      "firstName": "麻倉",
+      "userGroup": "1",
+      "staffType": "1",
+      "adminRole": "0"
+    }
+  },
+  "sales_menu": {
+    "result": 0,
+    "errors": [],
+    "brands": [{
+        "brandId": "0001",
+        "brandName": "ブランドA",
+        "stores": [{
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアA"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアB"
+          },
+          {
+            "storeName": "ブランドA-ドラッグストアC",
+            "storeNum": 20
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアD"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアE"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアF"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアG"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアH"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアI"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアJ"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアK"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドA-ドラッグストアE"
+          }
+        ]
+      },
+      {
+        "brandId": "0002",
+        "brandName": "ブランドB",
+        "stores": [{
+            "storeCode": "S001",
+            "storeName": "ブランドB-ドラッグストアA"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドB-ドラッグストアB"
+          },
+          {
+            "storeCode": "S001",
+            "storeName": "ブランドB-ドラッグストアC"
+          }
+        ]
+      },
+      {
+        "brandId": "0003",
+        "brandName": "ブランドC"
+      },
+      {
+        "brandId": "0004",
+        "brandName": "ブランドD"
+      }
+    ],
+    "businessContacts": [{
+        "businessContractId": "0013",
+        "notice": "追加業務連絡",
+        "isImportant": "1",
+        "createdAt": "20190810",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0012",
+        "notice": "追加業務連絡追加業務連絡",
+        "isImportant": "1",
+        "createdAt": "20190810",
+        "isDeleted": "0"
+      },
+      {
+        "businessContractId": "0013",
+        "notice": "追加業務連絡追加業務連絡追加業務連絡追加業務連絡追加業務連絡",
+        "isImportant": "0",
+        "createdAt": "20190730",
+        "isDeleted": "0"
+      }
+    ]
+  },
+  "brands": [{
+      "brandId": "0001",
+      "brandName": "ブランドA",
+      "stores": [{
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアA"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアB"
+        },
+        {
+          "storeName": "ブランドA-ドラッグストアC",
+          "storeNum": 20
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアD"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアE"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアF"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアG"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアH"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアI"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアJ"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアK"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドA-ドラッグストアE"
+        }
+      ]
+    },
+    {
+      "brandId": "0002",
+      "brandName": "ブランドB",
+      "stores": [{
+          "storeCode": "S001",
+          "storeName": "ブランドB-ドラッグストアA"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドB-ドラッグストアB"
+        },
+        {
+          "storeCode": "S001",
+          "storeName": "ブランドB-ドラッグストアC"
+        }
+      ]
+    },
+    {
+      "brandId": "0003",
+      "brandName": "ブランドC"
+    },
+    {
+      "brandId": "0004",
+      "brandName": "ブランドD"
+    }
+  ],
+  "events": [{
+      "id": 1,
+      "title": "Beach Cleanup",
+      "date": "Aug 28 2018",
+      "time": "10:00",
+      "location": "Daytona Beach",
+      "description": "Let's clean up this beach.",
+      "organizer": "Adam Jahr",
+      "category": "sustainability",
+      "attendees": [{
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "def456",
+          "name": "Gregg Pollack"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Park Cleanup",
+      "date": "Nov 12 2018",
+      "time": "12:00",
+      "location": "132 N Magnolia Street, Orlando, Florida",
+      "description": "We're going to clean up this park.",
+      "organizer": "Adam Jahr",
+      "category": "nature",
+      "attendees": [{
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pet Adoption Day",
+      "date": "Dec 2 2018",
+      "time": "12:00",
+      "location": "132 N Magnolia Street, Orlando, Florida",
+      "description": "Help animals find new homes.",
+      "organizer": "Gregg Pollack",
+      "category": "animal welfare",
+      "attendees": [{
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
+    }
+  ]
+}

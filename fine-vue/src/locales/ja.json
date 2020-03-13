@@ -1,0 +1,58 @@
+{
+  "userId": "ユーザID",
+  "password": "パスワード",
+  "hasInputError": "入力情報にエラーがあります",
+  "login-success": "Login Successful!",
+  "common": {
+    "header-title": "Fineシステム"
+  },
+  "page-title": {
+    "home": "トップ",
+    "Fine-Fine-login": "Fine管理者ログイン",
+    "user-user-login": "ユーザログイン",
+    "Fine-Fine-menu": "Fine管理者メニュー",
+    "customerMaintenance": "顧客マスタメンテナンス",
+    "accountMaintenance": "ユーザ登録（Fine）",
+    "userMaintenance": "ユーザー管理"
+  },
+  "login": {
+    "btn": "ログイン"
+  },
+  "side-menu": {
+    "home": "ホーム"
+  },
+  "validations": {
+    "messages": {
+      "_default": "入力値{0}に誤りがあります",
+      "required": "{0}は必須入力項目です",
+      "max": "{0}は{1}文字以内で入力してください",
+      "min": "{0}は{1}文字以上で入力してください"
+    },
+
+    "attributes": {
+      "userId": "従業員コード"
+    }
+  },
+  "attributes": {
+    "email": "E-mail Address",
+    "userId": "従業員コード",
+    "password": "パスワード",
+    "businessContact": "業務連絡",
+    "itemCategoryName": "商品カテゴリ名",
+    "brandName": "ブランド名",
+    "supplierName": "取引先名",
+    "postalCode": "郵便番号",
+    "address": "住所",
+    "buildingName": "ビル名",
+    "contactName": "先方担当者",
+    "contactInformation": "連絡先",
+    "contractType": "契約条件",
+    "storeCode": "店舗コード",
+    "storeName": "店舗名",
+    "itemName": "商品名",
+    "janCode": "JANコード",
+    "unitPrice": "単価",
+    "numberOfStocks": "在庫数",
+    "orderLimitNumber": "発注制限数"
+  }
+}
