@@ -26,7 +26,7 @@ public class AccountController {
     @Inject
     private AccountService accountService;
 
-    @RequestMapping(value = "/accounts/{accountId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/accounts", method = RequestMethod.GET)
     public AccountsResponse getAllAccount(HttpServletRequest request) {
         
         List<Account> accounts = accountService.getAllAccount();
