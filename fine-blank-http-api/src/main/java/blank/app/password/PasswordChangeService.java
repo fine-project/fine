@@ -8,14 +8,15 @@ import org.springframework.transaction.annotation.Transactional;
 import com.fineframework.auth.entity.Account;
 import com.fineframework.auth.entity.UserSession;
 import com.fineframework.net.http.FineStandardResponseBase;
-import com.fineframework.spring.repository.AccountRepositorySupport;
+
+import blank.app.repository.SampleRepositoryImpl;
 
 @Service
 @Transactional
 public class PasswordChangeService {
 	
 	@Autowired
-	private AccountRepositorySupport accountRepository;
+	private SampleRepositoryImpl accountRepository;
 	
 	public PasswordChangeResponse passwordChange(String password, UserSession user) {
 		

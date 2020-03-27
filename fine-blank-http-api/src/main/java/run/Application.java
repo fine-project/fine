@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ImportResource;
         "com.fineframework.spring.auth.repository",
         "com.fineframework.auth.repository",
         "com.fineframework.auth.service",
-        "excel",
+        "com.fineframework.spring.auth.useridpassword",
  })
 @Configuration
 @ImportResource("root-context.xml")

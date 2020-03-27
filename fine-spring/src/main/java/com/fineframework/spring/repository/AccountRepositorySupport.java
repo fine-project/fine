@@ -18,7 +18,7 @@ import com.fineframework.repository.DataNotFoundException;
  * @since 1.0
  */
 @Named
-public class AccountRepositorySupport extends RdbRepositotySupport<Account> implements AccountRepository {
+public abstract class AccountRepositorySupport extends RdbRepositotySupport<Account> implements AccountRepository {
 
     private String selectSQL = 
               "SELECT "

@@ -31,29 +31,11 @@ public class UserLoginController {
     private UserLoginService loginService;
     @Autowired
     private UsersSessionRepository usersSessionRepository;
-    @Autowired
-    private ExcelReaderFactory excelReaderFactory;
-
+ 
    @RequestMapping("/login")
     public UserLoginResponse login(
             @RequestBody UserLoginRequest loginRequest, HttpServletRequest request) {
        
-        
-//
-//          ExcelReader excelReader = excelReaderFactory.createReader();
-//          excelReader.initialize("C:\\Users\\arche\\Desktop\\\\Book1.xlsx");
-//          TestDto test = excelReader.getCellValue("0", TestDto.class);
-//          System.out.println(test.getCellA());
-//          System.out.println(test.getCellB());
-//          System.out.println(test.getCellC());
-//          for (InnerDto inner : test.getListMap()) {
-//              System.out.println(inner.getHoge());
-//              System.out.println(inner.getHoge2());
-//              System.out.println(inner.getHoge3());
-//          }
-//
-//          System.out.println("OK");
-//
         LOGGER.info("execute login!");
         LOGGER.info("userId:" + loginRequest.getUserId());
         LOGGER.debug("password:" + loginRequest.getPassword());
